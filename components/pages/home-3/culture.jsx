@@ -3,19 +3,19 @@ import Image from "next/image";
 export default function Culture() {
     const cultures = [
         {
-            image: "/sansanne网站/主页about/A1 代表东方的秩序.jpg",
+            image: "/images/culture/oriental-order.jpg",
             title: "东方的秩序",
             subtitle: "Oriental Order",
             description: "在东方文化的滋养下，我学会了克制、含蓄、让空间留有呼吸"
         },
         {
-            image: "/sansanne网站/主页about/A2 代表法式的优雅.jpg",
+            image: "/images/culture/french-elegance.jpg",
             title: "法式的优雅",
             subtitle: "French Elegance",
             description: "在法式美学的影响中，我追求比例的优雅、细节的温度、光影的诗意"
         },
         {
-            image: "/sansanne网站/主页about/A3 代表北美的现代.jpg",
+            image: "/images/culture/north-american-modern.jpg",
             title: "北美的现代",
             subtitle: "North American Modern",
             description: "在北美的当代精神中，我吸收了自由、逻辑与结构的清晰感"

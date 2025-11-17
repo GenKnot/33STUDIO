@@ -5,7 +5,7 @@ export default function Cta() {
         <div
             className="cta-section-03 overlay-07 section-padding-140"
             style={{
-                backgroundImage: 'url("/sansanne网站/室内设计/Maison Sansanne Home｜Lunar Stillness 在柔光与石质的呼吸间，理性与诗意共存，光成为秩序的语言。/Moonbeam色调设计5.jpg")',
+                backgroundImage: 'url("/images/cta/moonbeam-design.jpg")',
             }}
         >
             <div className="container">
