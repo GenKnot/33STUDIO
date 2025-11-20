@@ -116,12 +116,15 @@ export default function Hero() {
                         >
                             <div className="hero-content-03">
                                 <div className="hero-content-03_text-block">
-                                    <h1 className={`hero-content-03__title heading-xl text-black ${locale !== 'zh' ? 'heading-xl-en' : ''}`}>
+                                    <h1 className={`hero-content-03__title heading-xl text-black ${locale !== 'zh' ? 'heading-xl-en-hero' : ''}`}>
                                         {currentTitle}
                                         <span className="typing-cursor">|</span>
                                     </h1>
                                     <p>
-                                        {t('manifesto.lead')} {t('manifesto.p2')} {t('essence.p3')}
+                                        {locale === 'zh' 
+                                            ? `${t('manifesto.lead')} ${t('manifesto.p2')} ${t('essence.p1')}`
+                                            : `${t('manifesto.lead')} ${t('manifesto.p2')}`
+                                        }
                                     </p>
                                 </div>
                                 <div className="hero-content-03_button-group">
