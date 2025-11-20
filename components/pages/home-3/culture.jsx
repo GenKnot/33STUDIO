@@ -3,31 +3,33 @@ import Image from "next/image";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useLanguage } from "@/lib/i18n/context";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Culture() {
+    const { t, locale } = useLanguage();
     const sectionRef = useRef(null);
     const cardsRef = useRef([]);
 
     const cultures = [
         {
             image: "/images/culture/oriental-order.jpg",
-            title: "东方的秩序",
-            subtitle: "Oriental Order",
-            description: "在东方文化的滋养下，我学会了克制、含蓄、让空间留有呼吸"
+            titleKey: "culture.oriental.title",
+            subtitleKey: "culture.oriental.subtitle",
+            descriptionKey: "culture.oriental.description"
         },
         {
             image: "/images/culture/french-elegance.jpg",
-            title: "法式的优雅",
-            subtitle: "French Elegance",
-            description: "在法式美学的影响中，我追求比例的优雅、细节的温度、光影的诗意"
+            titleKey: "culture.french.title",
+            subtitleKey: "culture.french.subtitle",
+            descriptionKey: "culture.french.description"
         },
         {
             image: "/images/culture/north-american-modern.jpg",
-            title: "北美的现代",
-            subtitle: "North American Modern",
-            description: "在北美的当代精神中，我吸收了自由、逻辑与结构的清晰感"
+            titleKey: "culture.northAmerican.title",
+            subtitleKey: "culture.northAmerican.subtitle",
+            descriptionKey: "culture.northAmerican.description"
         }
     ];
 
@@ -95,13 +97,12 @@ export default function Culture() {
                 <div className="row justify-content-center mb-60">
                     <div className="col-xxl-8 col-xl-9">
                         <div className="section-heading text-center">
-                            <span className="subtitle">设计理念</span>
-                            <h2 className="section-heading__title heading-md">
-                                三种文化的交融
+                            <span className="subtitle">{t('culture.subtitle')}</span>
+                            <h2 className={`section-heading__title heading-md ${locale !== 'zh' ? 'heading-md-en' : ''}`}>
+                                {t('culture.title')}
                             </h2>
                             <p className="mt-24">
-                                这三种文化在 33STUDIO 的作品中彼此渗透，
-                                共同构成了独特的设计语言
+                                {t('culture.intro')}
                             </p>
                         </div>
                     </div>
@@ -121,19 +122,19 @@ export default function Culture() {
                                         <Image
                                             fill
                                             src={culture.image}
-                                            alt={culture.title}
+                                            alt={t(culture.titleKey)}
                                             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                         />
                                     </div>
                                     <div className="culture-card__content">
                                         <h3 className="culture-card__title">
-                                            {culture.title}
+                                            {t(culture.titleKey)}
                                         </h3>
                                         <span className="culture-card__subtitle">
-                                            {culture.subtitle}
+                                            {t(culture.subtitleKey)}
                                         </span>
                                         <p className="culture-card__description">
-                                            {culture.description}
+                                            {t(culture.descriptionKey)}
                                         </p>
                                     </div>
                                 </div>

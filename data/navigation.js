@@ -83,7 +83,7 @@ export default [
             },
             {
                 labelKey: "projects.studySeries",
-                url: "/home/study-series",
+                url: "/home/the-study-series",
             },
         ],
     },

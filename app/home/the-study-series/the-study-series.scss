@@ -1,0 +1,340 @@
+.the-study-series {
+    background: #F5F5F5;
+    
+    &__hero {
+        position: relative;
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+        background: #F5F5F5;
+    }
+    
+    &__hero-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        
+        &::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(245,245,245,0.4), rgba(245,245,245,0.6));
+            z-index: 1;
+        }
+    }
+    
+    &__hero-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        text-align: center;
+        width: 90%;
+        max-width: 1200px;
+    }
+    
+    &__brand {
+        font-size: 11px;
+        letter-spacing: 4px;
+        color: #8C8C8C;
+        text-transform: uppercase;
+        margin-bottom: 60px;
+        font-weight: 300;
+        
+        @media (min-width: 768px) {
+            font-size: 12px;
+            margin-bottom: 80px;
+        }
+    }
+    
+    &__title {
+        font-size: 56px;
+        font-weight: 200;
+        letter-spacing: 8px;
+        margin-bottom: 50px;
+        color: #2C2C2C;
+        text-transform: uppercase;
+        position: relative;
+        display: inline-block;
+        
+        @media (min-width: 768px) {
+            font-size: 84px;
+            letter-spacing: 12px;
+            margin-bottom: 60px;
+        }
+        
+        @media (min-width: 1200px) {
+            font-size: 108px;
+            letter-spacing: 16px;
+        }
+        
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #A5A7AA, transparent);
+            animation: lineExpand 1.5s ease-out 0.8s forwards;
+            
+            @media (min-width: 768px) {
+                bottom: -30px;
+            }
+        }
+    }
+    
+    @keyframes lineExpand {
+        to { width: 180px; }
+    }
+    
+    &__subtitle {
+        font-size: 15px;
+        font-weight: 300;
+        letter-spacing: 3px;
+        line-height: 2;
+        color: #5C5C5C;
+        max-width: 800px;
+        margin: 0 auto;
+        
+        @media (min-width: 768px) {
+            font-size: 17px;
+        }
+    }
+    
+    &__intro {
+        padding: 100px 0;
+        background: #FFFFFF;
+        
+        @media (max-width: 767px) {
+            padding: 80px 0;
+        }
+    }
+    
+    &__intro-text {
+        text-align: center;
+        
+        p {
+            font-size: 17px;
+            line-height: 2;
+            color: #3C3C3C;
+            font-weight: 300;
+            
+            @media (min-width: 768px) {
+                font-size: 18px;
+            }
+        }
+    }
+    
+    &__study-one,
+    &__study-two,
+    &__study-three {
+        padding: 80px 0;
+        
+        @media (min-width: 768px) {
+            padding: 100px 0;
+        }
+    }
+    
+    &__study-one {
+        background: #FAFAFA;
+    }
+    
+    &__study-two {
+        background: #F0F0F0;
+    }
+    
+    &__study-three {
+        background: #FAFAFA;
+    }
+    
+    &__study-header {
+        text-align: center;
+        margin-bottom: 60px;
+        
+        @media (min-width: 768px) {
+            margin-bottom: 80px;
+        }
+    }
+    
+    &__study-title {
+        font-size: 32px;
+        font-weight: 300;
+        letter-spacing: 4px;
+        color: #2C2C2C;
+        margin-bottom: 20px;
+        
+        @media (min-width: 768px) {
+            font-size: 42px;
+            letter-spacing: 6px;
+        }
+    }
+    
+    &__study-desc {
+        font-size: 14px;
+        font-weight: 300;
+        letter-spacing: 2px;
+        color: #8C8C8C;
+        text-transform: uppercase;
+        
+        @media (min-width: 768px) {
+            font-size: 15px;
+        }
+    }
+    
+    &__grid {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        padding: 0 20px;
+        
+        @media (min-width: 992px) {
+            flex-direction: row;
+            gap: 50px;
+            padding: 0 60px;
+        }
+    }
+    
+    &__grid-item {
+        position: relative;
+        width: 100%;
+        height: 60vh;
+        overflow: hidden;
+        
+        @media (min-width: 992px) {
+            width: 50%;
+            height: 70vh;
+        }
+        
+        img {
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        &:hover img {
+            transform: scale(1.05);
+        }
+    }
+    
+    &__single {
+        display: flex;
+        justify-content: center;
+        padding: 0 20px;
+        
+        @media (min-width: 768px) {
+            padding: 0 60px;
+        }
+    }
+    
+    &__single-item {
+        position: relative;
+        width: 100%;
+        height: 60vh;
+        overflow: hidden;
+        
+        @media (min-width: 768px) {
+            width: 70%;
+            height: 70vh;
+        }
+        
+        @media (min-width: 1200px) {
+            width: 60%;
+        }
+        
+        img {
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        &:hover img {
+            transform: scale(1.05);
+        }
+    }
+    
+    &__philosophy {
+        padding: 100px 0;
+        background: #FFFFFF;
+        
+        @media (max-width: 767px) {
+            padding: 80px 0;
+        }
+    }
+    
+    &__philosophy-text {
+        text-align: center;
+    }
+    
+    &__section-title {
+        font-size: 28px;
+        font-weight: 300;
+        letter-spacing: 4px;
+        color: #2C2C2C;
+        margin-bottom: 40px;
+        
+        @media (min-width: 768px) {
+            font-size: 32px;
+            letter-spacing: 6px;
+        }
+    }
+    
+    &__philosophy-text p {
+        font-size: 16px;
+        line-height: 2;
+        color: #3C3C3C;
+        font-weight: 300;
+        
+        @media (min-width: 768px) {
+            font-size: 17px;
+        }
+    }
+    
+    &__closing {
+        padding: 140px 0;
+        background: #FFFFFF;
+        
+        @media (max-width: 767px) {
+            padding: 100px 0;
+        }
+    }
+    
+    &__closing-text {
+        text-align: center;
+    }
+    
+    &__quote {
+        font-size: 20px;
+        line-height: 2.2;
+        color: #3C3C3C;
+        font-weight: 300;
+        margin-bottom: 50px;
+        font-style: italic;
+        
+        @media (min-width: 768px) {
+            font-size: 22px;
+        }
+    }
+    
+    &__signature {
+        font-size: 14px;
+        color: #8C8C8C;
+        font-weight: 300;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        position: relative;
+        display: inline-block;
+        
+        &::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 1px;
+            background: #A5A7AA;
+        }
+    }
+}

@@ -12,9 +12,18 @@ import { useLanguage } from "@/lib/i18n/context";
 export default function SidebarNavigation() {
     const { isSidebarActive } = useSelector((state) => state.toggle);
     const dispatch = useDispatch();
-    const { t } = useLanguage();
+    const { t, locale, changeLocale } = useLanguage();
 
     const path = usePathname();
+    
+    const getLanguageLabel = () => {
+        switch(locale) {
+            case 'zh': return '中文';
+            case 'en': return 'English';
+            case 'fr': return 'Français';
+            default: return '中文';
+        }
+    };
 
     return (
         <div className={`sidebar-menu ${isSidebarActive ? "active" : ""}`}>
@@ -31,6 +40,26 @@ export default function SidebarNavigation() {
             </div>
             <Sidebar>
                 <Menu>
+                    <SubMenu label={getLanguageLabel()}>
+                        <MenuItem
+                            className={locale === 'zh' ? "ui-nav-active2" : ""}
+                            onClick={() => changeLocale('zh')}
+                        >
+                            中文
+                        </MenuItem>
+                        <MenuItem
+                            className={locale === 'en' ? "ui-nav-active2" : ""}
+                            onClick={() => changeLocale('en')}
+                        >
+                            English
+                        </MenuItem>
+                        <MenuItem
+                            className={locale === 'fr' ? "ui-nav-active2" : ""}
+                            onClick={() => changeLocale('fr')}
+                        >
+                            Français
+                        </MenuItem>
+                    </SubMenu>
                     {navigation?.map((item, i) =>
                         item?.dropdown ? (
                             <SubMenu

@@ -1,6 +1,10 @@
+"use client";
 import Link from "next/link";
+import { useLanguage } from "@/lib/i18n/context";
 
 export default function Cta() {
+    const { t, locale } = useLanguage();
+    
     return (
         <div
             className="cta-section-03 overlay-07 section-padding-140"
@@ -13,14 +17,13 @@ export default function Cta() {
                     <div className="col-12">
                         <div className="cta-content-03">
                             <div className="cta-content-03__text-block">
-                                <h1 className="cta-content-03__title heading-lg text-sand mb-40">
-                                    光韵与气息之间，生活缓缓展开
+                                <h1 className={`cta-content-03__title heading-lg text-sand mb-40 ${locale !== 'zh' ? 'heading-lg-en' : ''}`}>
+                                    {t('cta.title')}
                                 </h1>
                                 <p className="text-sand" style={{fontSize: '1.25rem', lineHeight: '2', maxWidth: '900px', margin: '0 auto'}}>
-                                    33STUDIO 相信，空间的本质，是文化、理性与情绪的平衡。
-                                    它在东方的克制中沉静，在法式的优雅中舒展，在北美的现代中生长。
-                                    我们用设计去描绘生活的节奏，让光有韵，气有息，
-                                    让空间成为一种可被感知、可被记住的存在。
+                                    {t('cta.p1')}
+                                    {t('cta.p2')}
+                                    {t('cta.p3')}
                                 </p>
                             </div>
                             <div className="cta-content-03__button">
@@ -28,7 +31,7 @@ export default function Cta() {
                                     href="/contact"
                                     className="btn btn-primary hvr-fill-black"
                                 >
-                                    开启合作
+                                    {t('common.contact')}
                                     <i className="fa-solid fa-arrow-right icon-arrow-corner" />
                                 </Link>
                             </div>

@@ -1,0 +1,309 @@
+.whisper-of-scent {
+    background: #F7F7F5;
+    
+    &__hero {
+        position: relative;
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+        background: #F3F3F1;
+    }
+    
+    &__hero-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(243,243,241,0.5), rgba(247,247,245,0.7));
+            z-index: 1;
+        }
+    }
+    
+    &__hero-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        text-align: center;
+        width: 90%;
+        max-width: 1200px;
+    }
+    
+    &__brand {
+        font-size: 11px;
+        letter-spacing: 4px;
+        color: #8C8C8C;
+        text-transform: uppercase;
+        margin-bottom: 60px;
+        font-weight: 300;
+        
+        @media (min-width: 768px) {
+            font-size: 12px;
+            letter-spacing: 5px;
+            margin-bottom: 80px;
+        }
+    }
+    
+    &__title {
+        font-size: 56px;
+        font-weight: 200;
+        letter-spacing: 8px;
+        margin-bottom: 50px;
+        color: #2C2C2C;
+        text-transform: uppercase;
+        position: relative;
+        display: inline-block;
+        
+        @media (min-width: 768px) {
+            font-size: 84px;
+            letter-spacing: 12px;
+            margin-bottom: 60px;
+        }
+        
+        @media (min-width: 1200px) {
+            font-size: 108px;
+            letter-spacing: 16px;
+        }
+        
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #C0C0C0, transparent);
+            animation: lineExpand 1.5s ease-out 0.8s forwards;
+            
+            @media (min-width: 768px) {
+                bottom: -30px;
+            }
+        }
+    }
+    
+    @keyframes lineExpand {
+        to {
+            width: 180px;
+            
+            @media (min-width: 768px) {
+                width: 240px;
+            }
+        }
+    }
+    
+    &__subtitle {
+        font-size: 15px;
+        font-weight: 300;
+        letter-spacing: 3px;
+        line-height: 2;
+        color: #6C6C6C;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 20px;
+        
+        @media (min-width: 768px) {
+            font-size: 17px;
+            letter-spacing: 4px;
+        }
+        
+        @media (min-width: 1200px) {
+            font-size: 18px;
+        }
+    }
+    
+    &__narrative {
+        padding: 120px 0;
+        background: #fff;
+        
+        @media (max-width: 767px) {
+            padding: 80px 0;
+        }
+    }
+    
+    &__text {
+        text-align: center;
+        
+        p {
+            font-size: 17px;
+            line-height: 2.2;
+            color: #3C3C3C;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+            
+            @media (min-width: 768px) {
+                font-size: 18px;
+            }
+            
+            @media (min-width: 1200px) {
+                font-size: 19px;
+            }
+        }
+    }
+    
+    &__gallery {
+        background: #F7F7F5;
+        padding: 80px 40px;
+        
+        @media (min-width: 768px) {
+            padding: 100px 60px;
+        }
+    }
+    
+    &__triple {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        
+        @media (min-width: 768px) {
+            gap: 50px;
+        }
+        
+        @media (min-width: 992px) {
+            flex-direction: row;
+            gap: 50px;
+        }
+    }
+    
+    &__image-third {
+        position: relative;
+        width: 100%;
+        height: 60vh;
+        overflow: hidden;
+        
+        @media (min-width: 992px) {
+            width: 33.333%;
+            height: 70vh;
+        }
+        
+        img {
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        &:hover img {
+            transform: scale(1.05);
+        }
+    }
+    
+    &__details {
+        background: #F7F7F5;
+        padding: 0 40px 80px;
+        
+        @media (min-width: 768px) {
+            padding: 0 60px 100px;
+        }
+    }
+    
+    &__row {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        
+        @media (min-width: 768px) {
+            gap: 50px;
+        }
+        
+        @media (min-width: 992px) {
+            flex-direction: row;
+        }
+    }
+    
+    &__image-half {
+        position: relative;
+        width: 100%;
+        height: 60vh;
+        overflow: hidden;
+        
+        @media (min-width: 992px) {
+            width: 50%;
+            height: 70vh;
+        }
+        
+        img {
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        &:hover img {
+            transform: scale(1.05);
+        }
+    }
+    
+    &__closing {
+        position: relative;
+        padding: 140px 0;
+        overflow: hidden;
+        
+        @media (max-width: 767px) {
+            padding: 100px 0;
+        }
+    }
+    
+    &__closing-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+    
+    &__closing-text {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+    }
+    
+    &__quote {
+        font-size: 20px;
+        line-height: 2.2;
+        color: #2C2C2C;
+        font-weight: 300;
+        margin-bottom: 50px;
+        font-style: italic;
+        letter-spacing: 0.5px;
+        
+        @media (min-width: 768px) {
+            font-size: 22px;
+        }
+        
+        @media (min-width: 1200px) {
+            font-size: 24px;
+        }
+    }
+    
+    &__signature {
+        font-size: 14px;
+        color: #8C8C8C;
+        font-weight: 300;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        position: relative;
+        display: inline-block;
+        
+        @media (min-width: 768px) {
+            font-size: 15px;
+        }
+        
+        &::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 1px;
+            background: #C0C0C0;
+        }
+    }
+}

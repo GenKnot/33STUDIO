@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useLanguage } from "@/lib/i18n/context";
 
 export default function Hero() {
-    const { t } = useLanguage();
+    const { t, locale } = useLanguage();
     
     const titles = [
         t('hero.typing1'),
@@ -116,7 +116,7 @@ export default function Hero() {
                         >
                             <div className="hero-content-03">
                                 <div className="hero-content-03_text-block">
-                                    <h1 className="hero-content-03__title heading-xl text-black">
+                                    <h1 className={`hero-content-03__title heading-xl text-black ${locale !== 'zh' ? 'heading-xl-en' : ''}`}>
                                         {currentTitle}
                                         <span className="typing-cursor">|</span>
                                     </h1>

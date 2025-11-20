@@ -8,7 +8,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function About() {
-    const { t } = useLanguage();
+    const { t, locale } = useLanguage();
     const sectionRef = useRef(null);
     const logoRef = useRef(null);
     const textRef = useRef(null);
@@ -96,7 +96,7 @@ export default function About() {
                                     <span className="subtitle">
                                         {t('about.subtitle')}
                                     </span>
-                                    <h2 className="content-title heading-md mb-32">
+                                    <h2 className={`content-title heading-md mb-32 ${locale !== 'zh' ? 'heading-md-en' : ''}`}>
                                         {t('about.title')}
                                     </h2>
                                     <p className="mb-24">

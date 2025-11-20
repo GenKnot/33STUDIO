@@ -1,7 +1,6 @@
 @use "/public/scss/style.scss";
 @use "./custom.scss";
 
-// pagination
 .ui-next,
 .ui-prev {
     position: absolute;
@@ -35,7 +34,6 @@
     right: 0;
 }
 
-// custom dot 1 start
 .ui-custom-dot {
     height: 12px;
     width: 12px;
@@ -70,9 +68,6 @@
     padding-bottom: 90px !important;
 }
 
-// custom dot 1 start
-
-// custom dot 2 start
 .ui-custom-dot-2 {
     width: 15px;
     height: 15px;
@@ -93,18 +88,11 @@
     padding-bottom: 60px !important;
 }
 
-// custom dot 3 end
-
-// select theme 1 start
-
 .select-theme1 {
     .css-1u9des2-indicatorSeparator {
         display: none;
     }
 }
-// select theme 1 end
-
-// sidebar start
 
 .sidebar-menu {
     position: fixed;
@@ -128,26 +116,18 @@
     border-bottom: 1px solid #e5e5e5;
 }
 
-// sidebar end
-
-// map start
 .contact_location-main {
     margin-bottom: -9px;
 }
-// map end
 
-// active mobile sidebar menu start
 .ui-nav-active2 {
     > a {
         font-weight: bold !important;
     }
 }
-// active mobile sidebar menu end
-
 @import "./home.scss";
 @import "./urban-home.scss";
 
-// Civic Syntax Project Page
 @import "./urban/civic-syntax/civic-syntax.scss";
 
 @import "./urban/chromatic-playform/chromatic-playform.scss";
@@ -160,6 +140,17 @@
 @import "./urban/digital-loft/digital-loft.scss";
 @import "./urban/cyber-reverb/cyber-reverb.scss";
 @import "./urban/kinetic-atelier/kinetic-atelier.scss";
+
+@import "./home/quiet-elevation/quiet-elevation.scss";
+@import "./home/flowing-light/flowing-light.scss";
+@import "./home/whispering-light/whispering-light.scss";
+@import "./home/whisper-of-scent/whisper-of-scent.scss";
+@import "./home/traces-of-warmth/traces-of-warmth.scss";
+@import "./home/lunar-stillness/lunar-stillness.scss";
+@import "./home/sculpted-silence/sculpted-silence.scss";
+@import "./home/obsidian-calm/obsidian-calm.scss";
+@import "./home/pure-retreat/pure-retreat.scss";
+@import "./home/the-study-series/the-study-series.scss";
 
 .project-image {
     line-height: 0;
@@ -201,5 +192,75 @@
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
+    }
+}
+
+.heading-xl-en {
+    font-weight: 500;
+    line-height: 1.18;
+    font-size: 32px;
+
+    @media (min-width: 480px) {
+        font-size: 36px;
+    }
+
+    @media (min-width: 576px) {
+        font-size: 40px;
+    }
+
+    @media (min-width: 992px) {
+        font-size: 50px;
+    }
+
+    @media (min-width: 1200px) {
+        font-size: 58px;
+    }
+
+    @media (min-width: 1400px) {
+        font-size: 64px;
+    }
+}
+
+.heading-lg-en {
+    font-weight: 500;
+    line-height: 1.23;
+    font-size: 28px;
+
+    @media (min-width: 480px) {
+        font-size: 34px;
+    }
+
+    @media (min-width: 576px) {
+        font-size: 36px;
+    }
+
+    @media (min-width: 992px) {
+        font-size: 40px;
+    }
+
+    @media (min-width: 1200px) {
+        font-size: 44px;
+    }
+
+    @media (min-width: 1400px) {
+        font-size: 48px;
+    }
+}
+
+.heading-md-en {
+    font-weight: 500;
+    line-height: 1.27;
+    font-size: 24px;
+    
+    @media (min-width: 576px) {
+        font-size: 28px;
+    }
+
+    @media (min-width: 992px) {
+        font-size: 32px;
+    }
+
+    @media (min-width: 1200px) {
+        font-size: 36px;
     }
 }
