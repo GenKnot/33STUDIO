@@ -102,8 +102,8 @@ export default function Footer() {
                                         </h3>
                                         <ul className="list-style-regular row-gap-8">
                                             <li>
-                                                <Link href="mailto:info@33studio.com">
-                                                    info@33studio.com
+                                                <Link href="mailto:info@33studio.ca">
+                                                    info@33studio.ca
                                                 </Link>
                                             </li>
                                         </ul>

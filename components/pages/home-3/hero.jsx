@@ -146,8 +146,8 @@ export default function Hero() {
                             </div>
                             <div className="hero-contact-widgets">
                                 <div className="contact-widget">
-                                    <a href="mailto:info@33studio.com" className="contact-widget__email">
-                                        info@33studio.com
+                                    <a href="mailto:info@33studio.ca" className="contact-widget__email">
+                                        info@33studio.ca
                                     </a>
                                 </div>
                             </div>

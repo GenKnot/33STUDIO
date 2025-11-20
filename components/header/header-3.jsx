@@ -44,7 +44,7 @@ export default function Header3() {
                         <div className="header-group-3" style={{ display: 'flex', gap: '16px', alignItems: 'center' }}>
                             <LanguageSwitcher />
                             <a
-                                href="mailto:info@33studio.com"
+                                href="mailto:info@33studio.ca"
                                 className="btn btn-primary hvr-fill-black"
                             >
                                 {t('common.contact')}

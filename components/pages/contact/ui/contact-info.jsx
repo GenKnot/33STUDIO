@@ -36,7 +36,7 @@ export default function ContactInfo() {
                         />
                     </div>
                     <span className="contact-widget-02__text">
-                        info@33studio.com
+                        info@33studio.ca
                     </span>
                 </div>
             </div>

@@ -44,7 +44,7 @@ export default function Header() {
                         <div className="header-group-1">
                             <a
                                 className="menu-link-item"
-                                href="mailto:info@33studio.com"
+                                href="mailto:info@33studio.ca"
                             >
                                 <div className="menu-btn">Contact</div>
                             </a>
