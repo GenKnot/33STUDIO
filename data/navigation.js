@@ -4,6 +4,10 @@ export default [
         url: "/",
     },
     {
+        labelKey: "nav.about",
+        url: "/about",
+    },
+    {
         labelKey: "nav.urban",
         url: "/urban",
         dropdown: [

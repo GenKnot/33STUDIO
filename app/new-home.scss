@@ -1,0 +1,272 @@
+.new-home {
+    background: #ffffff;
+    
+    .hero-video {
+        position: relative;
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 160px 180px 120px;
+        background: #ffffff;
+        
+        @media (max-width: 1400px) {
+            padding: 160px 140px 120px;
+        }
+        
+        @media (max-width: 1200px) {
+            padding: 140px 100px 100px;
+        }
+        
+        @media (max-width: 991px) {
+            padding: 120px 60px 80px;
+        }
+        
+        @media (max-width: 767px) {
+            min-height: auto;
+            padding: 120px 20px 30px;
+        }
+        
+        &__player {
+            width: 100%;
+            max-height: 70vh;
+            object-fit: cover;
+            border-radius: 4px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            
+            @media (max-width: 767px) {
+                max-height: 50vh;
+            }
+        }
+    }
+    
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 40px;
+        
+        @media (max-width: 767px) {
+            padding: 0 30px;
+        }
+    }
+    
+    .manifesto-section {
+        background: transparent;
+        padding: 80px 0;
+        
+        @media (max-width: 991px) {
+            padding: 60px 0;
+        }
+        
+        @media (max-width: 767px) {
+            padding: 40px 0;
+        }
+        
+        .manifesto-content {
+            text-align: center;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .manifesto-title {
+            font-size: clamp(1.125rem, 3.5vw, 1.875rem);
+            font-weight: 400;
+            margin-bottom: 4rem;
+            color: #1a1a1a;
+            letter-spacing: 0.05em;
+            line-height: 1.5;
+            font-family: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+            
+            @media (max-width: 767px) {
+                margin-bottom: 3rem;
+            }
+        }
+        
+        .manifesto-text {
+            p {
+                font-size: clamp(0.875rem, 2vw, 1.125rem);
+                line-height: 2.4;
+                color: #3a3a3a;
+                margin-bottom: 2.5rem;
+                font-weight: 300;
+                text-align: center;
+                letter-spacing: 0.05em;
+                font-family: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+                
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    
+    .about-section {
+        background: transparent;
+        padding: 80px 0;
+        
+        @media (max-width: 991px) {
+            padding: 60px 0;
+        }
+        
+        @media (max-width: 767px) {
+            padding: 40px 0;
+        }
+        
+        .about-content {
+            text-align: center;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        .about-title {
+            font-size: clamp(1.125rem, 3.5vw, 1.875rem);
+            font-weight: 400;
+            margin-bottom: 4.5rem;
+            color: #1a1a1a;
+            letter-spacing: 0.05em;
+            line-height: 1.5;
+            position: relative;
+            display: inline-block;
+            font-family: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+            
+            @media (max-width: 767px) {
+                margin-bottom: 3.5rem;
+            }
+            
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: -1.5rem;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 60px;
+                height: 1px;
+                background: rgba(0, 0, 0, 0.2);
+            }
+        }
+        
+        .about-text {
+            p {
+                font-size: clamp(0.875rem, 2vw, 1.125rem);
+                line-height: 2.4;
+                color: #3a3a3a;
+                margin-bottom: 2.5rem;
+                font-weight: 300;
+                text-align: center;
+                letter-spacing: 0.05em;
+                font-family: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+                
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    
+    .philosophy-section {
+        background: transparent;
+        padding: 80px 0 60px;
+        
+        @media (max-width: 991px) {
+            padding: 60px 0 50px;
+        }
+        
+        @media (max-width: 767px) {
+            padding: 40px 0 30px;
+        }
+        
+        .philosophy-content {
+            text-align: center;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        .philosophy-text {
+            margin-bottom: 4.5rem;
+            
+            @media (max-width: 767px) {
+                margin-bottom: 3.5rem;
+            }
+            
+            p {
+                font-size: clamp(0.875rem, 2vw, 1.125rem);
+                line-height: 2.4;
+                color: #3a3a3a;
+                margin-bottom: 2.5rem;
+                font-weight: 300;
+                text-align: center;
+                letter-spacing: 0.05em;
+                font-family: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+                
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        
+        .philosophy-principles {
+            padding: 3rem 0;
+            max-width: 800px;
+            margin: 0 auto;
+            
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem 4rem;
+                
+                @media (max-width: 767px) {
+                    grid-template-columns: 1fr;
+                    gap: 1.5rem;
+                }
+                
+                li {
+                    font-size: clamp(0.875rem, 2vw, 1.125rem);
+                    line-height: 2.4;
+                    color: #3a3a3a;
+                    font-weight: 300;
+                    text-align: center;
+                    letter-spacing: 0.05em;
+                    font-family: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+                }
+            }
+        }
+    }
+    
+    .closing-section {
+        background: transparent;
+        padding: 60px 0 100px;
+        
+        @media (max-width: 991px) {
+            padding: 50px 0 80px;
+        }
+        
+        @media (max-width: 767px) {
+            padding: 30px 0 50px;
+        }
+        
+        .closing-content {
+            text-align: center;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        .closing-text {
+            font-size: clamp(0.875rem, 2vw, 1.125rem);
+            line-height: 2.4;
+            color: #3a3a3a;
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+            text-align: center;
+            letter-spacing: 0.05em;
+            font-family: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+            
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
