@@ -116,27 +116,53 @@ export default function CivicSyntaxContent() {
             const texts = section.querySelectorAll('.scroll-reveal-text');
             
             if (overlay && texts.length > 0) {
-                gsap.set(overlay, { opacity: 0 });
-                gsap.set(texts, { opacity: 0, y: 30 });
+                const isMobile = window.innerWidth < 768;
                 
-                ScrollTrigger.create({
-                    trigger: section,
-                    start: "top 80%",
-                    end: "center center",
-                    scrub: 1,
-                    onUpdate: (self) => {
-                        const progress = self.progress;
-                        gsap.to(overlay, { 
-                            opacity: progress * 0.9,
-                            duration: 0.1 
-                        });
-                        gsap.to(texts, { 
-                            opacity: Math.max(0, (progress - 0.2) * 1.3),
-                            y: 30 - (progress * 30),
-                            duration: 0.1 
-                        });
-                    }
-                });
+                if (isMobile) {
+                    gsap.set(overlay, { opacity: 0 });
+                    gsap.set(texts, { opacity: 0, y: 20 });
+                    
+                    ScrollTrigger.create({
+                        trigger: section,
+                        start: "top 90%",
+                        end: "top 50%",
+                        scrub: 1,
+                        onUpdate: (self) => {
+                            const progress = self.progress;
+                            gsap.to(overlay, { 
+                                opacity: progress * 0.85,
+                                duration: 0.1 
+                            });
+                            gsap.to(texts, { 
+                                opacity: Math.max(0, progress * 1.2),
+                                y: 20 - (progress * 20),
+                                duration: 0.1 
+                            });
+                        }
+                    });
+                } else {
+                    gsap.set(overlay, { opacity: 0 });
+                    gsap.set(texts, { opacity: 0, y: 30 });
+                    
+                    ScrollTrigger.create({
+                        trigger: section,
+                        start: "top 95%",
+                        end: "center center",
+                        scrub: 1,
+                        onUpdate: (self) => {
+                            const progress = self.progress;
+                            gsap.to(overlay, { 
+                                opacity: progress * 0.9,
+                                duration: 0.1 
+                            });
+                            gsap.to(texts, { 
+                                opacity: Math.max(0, (progress - 0.2) * 1.3),
+                                y: 30 - (progress * 30),
+                                duration: 0.1 
+                            });
+                        }
+                    });
+                }
             }
         });
 
