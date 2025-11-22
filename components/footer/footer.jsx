@@ -94,7 +94,7 @@ export default function Footer() {
                                             Find us
                                         </h3>
                                         <p>
-                                            33STUDIO <br />
+                                            33 STUDIO <br />
                                             Montreal, QC
                                             <br />
                                             Canada
