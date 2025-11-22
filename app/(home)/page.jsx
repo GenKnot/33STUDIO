@@ -82,10 +82,24 @@ export default function Home() {
                     </div>
                 </section>
 
-                <section className="closing-section" ref={addToRefs}>
+                <section className="design-language-section" ref={addToRefs}>
                     <div className="container">
-                        <div className="closing-content">
-                            <p className="closing-text" style={{ whiteSpace: 'pre-line' }}>{t('home.closingP1')}</p>
+                        <div className="design-language-content">
+                            <h2 className="design-language-title">{t('home.designLanguageTitle')}</h2>
+                            <div className="design-language-text">
+                                <p style={{ whiteSpace: 'pre-line' }}>{t('home.designLanguageP1')}</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section className="design-philosophy-section" ref={addToRefs}>
+                    <div className="container">
+                        <div className="design-philosophy-content">
+                            <h2 className="design-philosophy-title">{t('home.designPhilosophyTitle')}</h2>
+                            <div className="design-philosophy-text">
+                                <p style={{ whiteSpace: 'pre-line' }}>{t('home.designPhilosophyP1')}</p>
+                            </div>
                         </div>
                     </div>
                 </section>
